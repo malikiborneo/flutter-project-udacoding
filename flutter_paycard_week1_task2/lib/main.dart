@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_masked_text/flutter_masked_text.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,8 +34,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  DateTime _selectedDate;
   TextEditingController cardnameController = TextEditingController();
-  TextEditingController cardnumberController = TextEditingController();
+  var controller = new MaskedTextController(mask: "0000 0000 0000 0000");
   TextEditingController cvvController = TextEditingController();
   TextEditingController expdateController = TextEditingController();
   
@@ -71,7 +75,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 80,
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: TextField(
-                    controller: cardnumberController,
+                    inputFormatters: [
+                      LengthLimitingTextInputFormatter(20),
+                      ],
+                    controller: controller,
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(   
                       icon: const Icon(
                       Icons.payment,
@@ -88,7 +96,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 80,
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: TextField(
+                      inputFormatters: [
+                      LengthLimitingTextInputFormatter(3),
+                      ],
                     controller: cvvController,
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(   
                       icon: const Icon(
                       Icons.payments,
@@ -104,8 +116,12 @@ class _MyHomePageState extends State<MyHomePage> {
                Container(
                   height: 80,
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  child: TextField(
+                  child: TextField(   
+                    focusNode: AlwaysDisabledFocusNode(),                                     
                     controller: expdateController,
+                    onTap: () {
+                      _selectDate(context);
+                    },
                     decoration: InputDecoration(   
                       icon: const Icon(
                       Icons.calendar_today_rounded,
@@ -118,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),  
 
-                  
+       
               
                   Container(        
                     width: 40,
@@ -135,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text('Pay', style: TextStyle(fontSize: 18, color: Colors.white)),
                       onPressed: () {
                          print(cardnameController.text);
-                        print(cardnumberController.text);
+                        print(controller.text);
                         print(cvvController.text);
                         print(expdateController.text);
                       }, 
@@ -150,4 +166,39 @@ class _MyHomePageState extends State<MyHomePage> {
       
     );
   }
+  _selectDate(BuildContext context) async {
+    DateTime newSelectedDate = await showDatePicker(
+        context: context,
+        initialDate: _selectedDate != null ? _selectedDate : DateTime.now(),
+        firstDate: DateTime(2000),
+        lastDate: DateTime(2040),
+        builder: (BuildContext context, Widget child) {
+          return Theme(
+            data: ThemeData.dark().copyWith(
+              colorScheme: ColorScheme.dark(
+              
+              ),
+              dialogBackgroundColor: Colors.blue[500],
+            ),
+            child: child,
+          );
+        });
+
+    if (newSelectedDate != null) {
+      _selectedDate = newSelectedDate;
+      expdateController
+        ..text = new DateFormat("MM/yy").format(_selectedDate)
+        ..selection = TextSelection.fromPosition(TextPosition(
+            offset: expdateController.text.length,
+            affinity: TextAffinity.upstream));
+    }
+  }
+}
+
+
+
+
+class AlwaysDisabledFocusNode extends FocusNode {
+  @override
+  bool get hasFocus => false;
 }
