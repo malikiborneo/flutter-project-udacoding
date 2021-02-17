@@ -20,22 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c8c1d37-e57f-4a68-a40f-868f5aac4527" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/app/src/app.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/list-post.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/post.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/register.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/flutter_uiapps_week1_task1_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/flutter_uiapps_week1_task1_android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_uiapps_week1_task1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_uiapps_week1_task1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/app.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -53,6 +54,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Paman Borneo\Dropbox\My PC (LAPTOP-3TAI36N0)\Documents\Udacoding Flutter Batch 4\project-flutter\project-flutter\flutter_uiapps_week1_task1\lib" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -64,6 +70,14 @@
       <option name="presentableId" value="Default" />
       <updated>1613361982789</updated>
     </task>
+    <task id="LOCAL-00001" summary="edit 1">
+      <created>1613373757600</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613373757600</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,43 +90,56 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="edit 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit 1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="100" width="1720" height="840" key="AVDManager" timestamp="1613370082689">
+    <state x="828" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613415081407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="100" y="100" width="1720" height="840" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1613370082689" />
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1613370989804">
+    <state x="828" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613415081407" />
+    <state x="100" y="100" width="1720" height="840" key="AVDManager" timestamp="1613414626961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613370989804" />
-    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1613370989804">
+    <state x="100" y="100" width="1720" height="840" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1613414626961" />
+    <state width="914" height="281" key="GridCell.Tab.0.bottom" timestamp="1613393832782">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613370989804" />
-    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1613370989804">
+    <state width="914" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613393832782" />
+    <state width="914" height="281" key="GridCell.Tab.0.center" timestamp="1613393832782">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613370989804" />
-    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1613370989804">
+    <state width="914" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613393832782" />
+    <state width="914" height="281" key="GridCell.Tab.0.left" timestamp="1613393832782">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613370989804" />
-    <state width="1877" height="281" key="GridCell.Tab.1.bottom" timestamp="1613370429038">
+    <state width="914" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613393832782" />
+    <state width="914" height="281" key="GridCell.Tab.0.right" timestamp="1613393832782">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613370429038" />
-    <state width="1877" height="281" key="GridCell.Tab.1.center" timestamp="1613370429038">
+    <state width="914" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613393832782" />
+    <state width="914" height="281" key="GridCell.Tab.1.bottom" timestamp="1613393832783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613370429038" />
-    <state width="1877" height="281" key="GridCell.Tab.1.left" timestamp="1613370429038">
+    <state width="914" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613393832783" />
+    <state width="914" height="281" key="GridCell.Tab.1.center" timestamp="1613393832783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613370429038" />
-    <state width="1877" height="281" key="GridCell.Tab.1.right" timestamp="1613370429038">
+    <state width="914" height="281" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613393832783" />
+    <state width="914" height="281" key="GridCell.Tab.1.left" timestamp="1613393832783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613370429038" />
+    <state width="914" height="281" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613393832783" />
+    <state width="914" height="281" key="GridCell.Tab.1.right" timestamp="1613393832783">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="281" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613393832783" />
+    <state x="1249" y="445" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613373503428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1249" y="445" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1613373503428" />
   </component>
 </project>
