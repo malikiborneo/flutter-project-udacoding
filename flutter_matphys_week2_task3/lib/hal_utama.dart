@@ -4,6 +4,9 @@
 
 
 class HomePage extends StatefulWidget {
+  final String username;
+  final String password;
+  HomePage({Key key, @required this.username, @required this.password}) : super(key:  key);
   static String tag = 'hal_utama';
   
   @override
@@ -15,9 +18,8 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage>
 {
-  final String username;
-  final String password;
-  HomePageState({Key key, @required this.username, @required this.password}) : super(key:  key);
+
+  
 
    @override
   Widget build(BuildContext context) {
