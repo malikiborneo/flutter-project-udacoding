@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     LoginPage.tag: (context) => LoginPage(),
     HomePage.tag: (context) => HomePage(),
     KonversiPanjang.tag: (context) => KonversiPanjang(),
-    HitungFisika.tag: (context) => HitungFisika(),
+    HitungFisika.tag: (context) => HitungFisika()
   };
 
 
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Colors.black,
           inputDecorationTheme: const InputDecorationTheme(
-            labelStyle: TextStyle(color: Colors.grey),
+            labelStyle: TextStyle(color: Colors.black),
             hintStyle: TextStyle(color: Colors.grey),
           ),
       ),

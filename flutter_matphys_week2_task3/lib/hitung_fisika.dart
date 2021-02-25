@@ -26,7 +26,7 @@ class HitungFisikaState extends State<HitungFisika>
    @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      backgroundColor: Colors.orange,
+      backgroundColor: Colors.lightBlueAccent,
      body: Padding(
             padding: EdgeInsets.all(10),
             child: ListView(
@@ -36,6 +36,7 @@ class HitungFisikaState extends State<HitungFisika>
                   height: 100,
                   padding: EdgeInsets.all(20),
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     controller: p2Controller,
                     decoration: InputDecoration(
                  
@@ -58,6 +59,7 @@ class HitungFisikaState extends State<HitungFisika>
                   height: 80,
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     controller: l2Controller,
                     decoration: InputDecoration(  
                       hintStyle: TextStyle(color: Colors.white), 
@@ -82,6 +84,7 @@ class HitungFisikaState extends State<HitungFisika>
                   height: 80,
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     controller: t2Controller,
                     decoration: InputDecoration(  
                       hintStyle: TextStyle(color: Colors.white), 
@@ -105,6 +108,7 @@ class HitungFisikaState extends State<HitungFisika>
                   height: 80,
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     controller: hasilVolume,
                     decoration: InputDecoration(  
                       hintStyle: TextStyle(color: Colors.white), 
@@ -143,6 +147,7 @@ class HitungFisikaState extends State<HitungFisika>
                   height: 100,
                   padding: EdgeInsets.all(20),
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     controller: p1Controller,
                     decoration: InputDecoration(
                      
@@ -165,6 +170,7 @@ class HitungFisikaState extends State<HitungFisika>
                   height: 80,
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     controller: l1Controller,
                     decoration: InputDecoration(  
                       hintStyle: TextStyle(color: Colors.white), 
@@ -189,6 +195,7 @@ class HitungFisikaState extends State<HitungFisika>
                   height: 80,
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     controller: hasilLuas,
                     decoration: InputDecoration(  
                       hintStyle: TextStyle(color: Colors.white), 

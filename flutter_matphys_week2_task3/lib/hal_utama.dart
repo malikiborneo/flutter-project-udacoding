@@ -1,5 +1,6 @@
-
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'hitung_fisika.dart';
+import 'konversi_panjang.dart';
 
 
 
@@ -39,6 +40,7 @@ class HomePageState extends State<HomePage>
                       color: Colors.grey,
                       child: Text('Length Unit Converter', style: TextStyle(fontSize: 18, color: Colors.black)),
                       onPressed: () {
+                        Navigator.of(context).pushNamed(KonversiPanjang.tag);
                         
                       },
                     )),
@@ -54,6 +56,7 @@ class HomePageState extends State<HomePage>
                       color: Colors.grey,
                       child: Text('Volume and Area Calc.', style: TextStyle(fontSize: 18, color: Colors.black)),
                       onPressed: () {
+                        Navigator.of(context).pushNamed(HitungFisika.tag);
                         
                       },
                     )),

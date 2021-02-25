@@ -41,6 +41,7 @@ class KonversiPanjangState extends State<KonversiPanjang>
                   height: 100,
                   padding: EdgeInsets.all(20),
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     controller: panjangController,
                     decoration: InputDecoration(
                       hintStyle: TextStyle(color: Colors.white),
@@ -79,6 +80,7 @@ class KonversiPanjangState extends State<KonversiPanjang>
                   height: 80,
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     controller: konversiPanjangController,
                     decoration: InputDecoration(  
                       hintStyle: TextStyle(color: Colors.white),                                     

@@ -91,13 +91,13 @@ class _LoginPageState extends State<LoginPage> {
                   else{
                
                   // Navigator.of(context).pushNamed(HomePage.tag);
-                  // Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(
-                  //           builder: (context) => HomePage(
-                  //             username: tempUsername,
-                  //             password: tempPassword, 
-                  //           )));
+                  Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => HomePage(
+                              username: tempUsername,
+                              password: tempPassword, 
+                            )));
                   }
                 }
               },
