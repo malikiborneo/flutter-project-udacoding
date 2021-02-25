@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                 if (_formKey.currentState.validate()) {
 
                   if(tempUsername != 'udacodingid'){
-                    print("Worng username");
+                    print("Wrong username");
                   }
                   else if(tempPassword.length <= 6){
                     print("Password must be 6 characters or more");
