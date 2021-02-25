@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'hal_utama.dart'
+import 'login.dart';
+import 'hal_utama.dart';
 import 'hitung_fisika.dart';
 import 'konversi_panjang.dart';
 
@@ -12,7 +13,15 @@ void main() {
 
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  
+    final routes = <String, WidgetBuilder>{
+    LoginPage.tag: (context) => LoginPage(),
+    HomePage.tag: (context) => HomePage(),
+    KonversiPanjang.tag: (context) => KonversiPanjang(),
+    HitungFisika.tag: (context) => HitungFisika(),
+  };
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,18 +29,20 @@ class MyApp extends StatelessWidget {
       title: 'Geometry and Meter Conversion',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        primaryColor: Colors.white,
+        primaryColor: Colors.black,
           inputDecorationTheme: const InputDecorationTheme(
-            labelStyle: TextStyle(color: Colors.white),
-            hintStyle: TextStyle(color: Colors.white),
+            labelStyle: TextStyle(color: Colors.grey),
+            hintStyle: TextStyle(color: Colors.grey),
           ),
       ),
-      routes: {
-        '/' : (context) => Login(),
-        '/hal_utama': (context) => HalUtama(),
-        'hitung_fisika': (context) => HitungFisika(),
-        'konversi_panjang': (context) => KonversiPanjang()
-      },
+      home: LoginPage(),
+      routes: routes,
+      // routes: {
+      //   '/' : (context) => Login(),
+      //   '/hal_utama': (context) => HalUtama(),
+      //   'hitung_fisika': (context) => HitungFisika(),
+      //   'konversi_panjang': (context) => KonversiPanjang()
+      // },
     );
   }
 }

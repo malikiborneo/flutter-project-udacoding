@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="maliki.borneo.flutter_matphys_week2_task3">
    <application
-        android:label="flutter_matphys_week2_task3"
+        android:label="MathPhys"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
