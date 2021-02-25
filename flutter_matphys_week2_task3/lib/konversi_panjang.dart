@@ -14,43 +14,37 @@ class KonversiPanjang extends StatefulWidget {
 
 class KonversiPanjangState extends State<KonversiPanjang>
 {
-  TextEditingController nameController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController confirmpasswordController = TextEditingController();
+  TextEditingController panjangController = TextEditingController();
+  TextEditingController konversiPanjangController = TextEditingController();
+  String _valSatuanAwal;
+  String _valSatuanAkhir;
+    List _satuanPanjang = [
+    "mm",
+    "cm",
+    "dm",
+    "m",
+    "dam",
+    "hm",
+    "km"
+  ];
 
-  static const routeName = '/register';
    @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      backgroundColor: Colors.orange,
+      backgroundColor: Colors.lightBlueAccent,
      body: Padding(
             padding: EdgeInsets.all(10),
             child: ListView(
               children: <Widget>[
-                Container(
-                    alignment: Alignment.center,
-                    height: 180,
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      'Blogging',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 56),
-                    )),
+
                 Container(
                   height: 100,
                   padding: EdgeInsets.all(20),
                   child: TextField(
-                    controller: nameController,
+                    controller: panjangController,
                     decoration: InputDecoration(
-                      prefixIcon: const Icon(
-                      Icons.person,
-                      color: Colors.white,
-                      ),
                       hintStyle: TextStyle(color: Colors.white),
-                      labelText: 'Full Name',
+                      labelText: 'Satuan Panjang',
                       enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0)),
                       borderSide: BorderSide(color: Colors.white, width: 2),
@@ -63,19 +57,32 @@ class KonversiPanjangState extends State<KonversiPanjang>
                   ),
                 ),
 
+              DropdownButton(
+              value: _valSatuanAwal,
+              items: _satuanPanjang.map((value) {
+                return DropdownMenuItem(
+                  child: Text(value),
+                  value: value,
+                );
+              }).toList(),
+              onChanged: (value) {
+                setState(() {
+                  _valSatuanAwal = value; 
+                });
+              },
+            ),
+
+                  
+
                 
                 Container(
                   height: 80,
                   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: TextField(
-                    controller: emailController,
+                    controller: konversiPanjangController,
                     decoration: InputDecoration(  
-                      hintStyle: TextStyle(color: Colors.white), 
-                      prefixIcon: const Icon(
-                      Icons.alternate_email_rounded,
-                      color: Colors.white,
-                      ),                   
-                      labelText: 'Valid Email',
+                      hintStyle: TextStyle(color: Colors.white),                                     
+                      labelText: 'Konversi Satuan Panjang',
                       enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0)),
                       borderSide: BorderSide(color: Colors.white, width: 2),
@@ -89,92 +96,26 @@ class KonversiPanjangState extends State<KonversiPanjang>
                     ),
                   ),
                 
+                   DropdownButton(
+              value: _valSatuanAkhir,
+              items: _satuanPanjang.map((value) {
+                return DropdownMenuItem(
+                  child: Text(value),
+                  value: value,
+                );
+              }).toList(),
+              onChanged: (value) {
+                setState(() {
+                  _valSatuanAkhir = value; 
+                });
+              },
+            ),
 
 
-                Container(
-                  height: 80,
-                  padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  child: TextField(
-                    obscureText: true,
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                      hintStyle: TextStyle(color: Colors.white),
-                      prefixIcon: const Icon(
-                      Icons.lock,
-                      color: Colors.white,
-                      ),
-                      border: OutlineInputBorder(),
-                      labelText: 'Password',
-                       enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                      borderSide: BorderSide(color: Colors.white, width: 2),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                      borderSide: BorderSide(color: Colors.white, width: 2),
-                      )
-                    ),
-                      
-
-                    ),
-                  ),
-                
-
-                 Container(
-                  height: 90,
-                  padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  child: TextField(
-                    obscureText: true,
-                    controller: confirmpasswordController,
-                    decoration: InputDecoration(
-                      hintStyle: TextStyle(color: Colors.white),
-                      prefixIcon: const Icon(
-                      Icons.lock,
-                      color: Colors.white,
-                      ),
-                      border: OutlineInputBorder(),
-                      labelText: 'Confirm Password',
-                       enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                      borderSide: BorderSide(color: Colors.white, width: 2),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                      borderSide: BorderSide(color: Colors.white, width: 2),
-                      )
-                    ),
-                    ),
-                  ),
+               
                 
 
 
-                Container(
-                    height: 60,
-                    padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: BorderSide(color: Colors.white)),
-                      color: Colors.white,
-                      child: Text('Sign Up', style: TextStyle(fontSize: 18, color: Colors.blue)),
-                      onPressed: () {
-                        print(nameController.text);
-                        print(emailController.text);
-                        print(passwordController.text);
-                        print(confirmpasswordController.text);
-                      },
-                    )),
-                Container(
-                  padding: EdgeInsets.all(10),
-                    child: Row(
-                      children: <Widget>[
-                        Text('Already have an account? ', style: TextStyle(fontSize: 16, color: Colors.white)),
-                        Text( 'Sign in',
-                            style: TextStyle(fontSize: 16, decoration: TextDecoration.underline, color: Colors.black),
-                          )
-                      ],
-                      mainAxisAlignment: MainAxisAlignment.center,
-                    ))
               ],
             )));
   }

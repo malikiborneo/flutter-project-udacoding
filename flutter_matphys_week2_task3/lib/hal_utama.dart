@@ -1,16 +1,23 @@
-import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  // final String username;
-  // final String password;
-  // HomePage({Key key, @required this.username, @required this.password}) : super(key:  key);
-  
+ import 'package:flutter/material.dart';
+
+
+
+class HomePage extends StatefulWidget {
   static String tag = 'hal_utama';
-
-
   
+  @override
+  State<StatefulWidget> createState() {
+    return new HomePageState();
+  }
+}
 
 
+class HomePageState extends State<HomePage>
+{
+  final String username;
+  final String password;
+  HomePageState({Key key, @required this.username, @required this.password}) : super(key:  key);
 
    @override
   Widget build(BuildContext context) {
