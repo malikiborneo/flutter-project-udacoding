@@ -85,9 +85,6 @@ class _LoginPageState extends State<LoginPage> {
                   else if(tempPassword.length <= 6){
                     print("Password must be 6 characters or more");
                   }
-                  else if(tempPassword !='udacodingJaya2021'){
-                    print("Wrong password");
-                  }
                   else{
                
                   // Navigator.of(context).pushNamed(HomePage.tag);
