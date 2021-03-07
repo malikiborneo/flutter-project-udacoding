@@ -49,10 +49,10 @@ class GridState extends State<GaleriTernak>{
     corcess.add("Bebek");
 
 
-    corcessImg.add("sapi.png");
-    corcessImg.add("kambing.png");
-    corcessImg.add("ayam.png");
-    corcessImg.add("bebek.png");
+    corcessImg.add("assets/img/sapi.jpg");
+    corcessImg.add("assets/img/kambing.png");
+    corcessImg.add("assets/img/ayam.png");
+    corcessImg.add("assets/img/bebek.png");
 
 
   }
